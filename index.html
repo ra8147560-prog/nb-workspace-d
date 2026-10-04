@@ -990,10 +990,10 @@ window.ATLAS_CONFIG = {
     setTimeout(function () {
       row.remove();
       var b = addBubble("a", "", null, true), col = b.parentNode;
-      var parts = full.split(/(\s+)/), k = 0;
+      var parts = full.split(/(\s+)/), k = 0, t0 = now(), dur = Math.min(2200, 300 + parts.length * 12);
       clearInterval(S.streamTimer);
       S.streamTimer = setInterval(function () {
-        k = Math.min(parts.length, k + 3); b.textContent = parts.slice(0, k).join(""); scrollChat();
+        k = Math.min(parts.length, Math.max(k + 1, Math.ceil(parts.length * (now() - t0) / dur))); b.textContent = parts.slice(0, k).join(""); scrollChat();
         if (k >= parts.length) { clearInterval(S.streamTimer); $("atlasStatus").textContent = "Online"; addActions(col, full, hit && hit.insert ? R[key] : null); scrollChat(); }
       }, 45);
     }, 600 + Math.min(900, full.length * 2));
