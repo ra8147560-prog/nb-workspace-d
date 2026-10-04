@@ -1028,7 +1028,8 @@ window.ATLAS_CONFIG = {
   function showNudge() {
     if (S.screen !== "work" || S.nOpen || S.nIdx >= maxNudges()) return;
     clearTimeout(S.nudgeTimer);
-    var L = LESSONS[lessonOrder()[S.nIdx]];
+    var shown = S.shown || (S.shown = []), key = lessonOrder().filter(function (k) { return shown.indexOf(k) < 0; })[0]; shown.push(key);
+    var L = LESSONS[key];
     S.nIdx++; S.nOpen = true; S.nAt = now(); S.nName = L.name;
     if (S.nIdx === 1) { S.firstAt = S.nAt; setData("ndg_at", secs(S.marks.work)); }
     setData("ndg_n", S.nIdx);
