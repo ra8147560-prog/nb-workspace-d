@@ -744,12 +744,12 @@ window.ATLAS_CONFIG = {
 
   var STEER_TEXT = {
     1: { tour3key: "[[You decide]] how Atlas works with you.",
-         tour3: "You choose how often it suggests things, how it writes, its tone, and your skill focus. You can change these settings at any time with the Atlas settings button.",
+         tour3: "You choose how often it suggests things, how it writes its suggestions, its tone, and your skill focus. You can change these settings at any time with the Atlas settings button.",
          own: "&#128275; Managed by you", status: "You control these settings",
          banner: "<span class='ic'>&#128275;</span><span><b>You control these settings.</b> Choose how Atlas works with you. You can change them at any time with the Atlas settings button.</span>",
          tag: "&#128275; Settings: managed by <b>YOU</b>" },
     0: { tour3key: "[[Northbridge IT decides]] how Atlas works for all employees.",
-         tour3: "Northbridge IT sets how often Atlas suggests things, how it writes, its tone, and the skill focus. Employees cannot change these settings.",
+         tour3: "Northbridge IT sets how often Atlas suggests things, how it writes its suggestions, its tone, and the skill focus. Employees cannot change these settings.",
          own: "&#128274; Set by Northbridge IT", status: "Set by Northbridge IT",
          banner: "<span class='ic'>&#128274;</span><span><b>These settings are set by Northbridge IT for all employees. You cannot change them.</b></span>",
          tag: "&#128274; Settings: set by <b>NORTHBRIDGE IT</b>" }
@@ -948,7 +948,7 @@ window.ATLAS_CONFIG = {
     } else if (st === 2) {
       head(TICON.sliders, "Who controls Atlas");
       key(high ? "&#128275;" : "&#128274;", T.tour3key); sup(T.tour3);
-      sup("On the next screen you will see the Atlas settings that apply to you.");
+      sup("After a quick check, you will see the Atlas settings that apply to you.");
       mini('<div class="mh"><span class="mav2">' + TICON.spark + '</span>Atlas settings</div>' +
         '<div class="sw"><span>How often Atlas suggests skills</span><span class="tg"></span></div>' +
         '<div class="sw"><span>How Atlas writes</span><span class="tg"></span></div>' +
@@ -994,7 +994,7 @@ window.ATLAS_CONFIG = {
     setData("setup_t", secs(S.marks.setup)); syncSettingData(); refreshAtlas();
     show("work");
     var A0 = ALIGN_TEXT[S.cond.align];
-    var hello = (S.settings.tone === "Friendly" ? "Hi! I'm Atlas. " : "I'm Atlas. ") + A0.hello + " I can summarize Dana's email, draft a reply, or change the tone of your draft. Ask me in your own words or pick a suggestion below.";
+    var hello = (S.settings.tone === "Friendly" ? "Hi! I'm Atlas. " : "I'm Atlas. ") + A0.hello + " I can summarize Dana's email, draft a reply, or rewrite your draft. Ask me in your own words or pick a suggestion below.";
     addBubble("a", hello, null, true);
     scheduleNudge(CFG.NUDGE_FIRST_MS || 5000);
   });
@@ -1099,7 +1099,7 @@ window.ATLAS_CONFIG = {
   function renderNudgeFoot() {
     var f = $("nFoot"); if (!f || !S.cond) return; f.innerHTML = "";
     if (S.cond.steer === 1) {
-      rich(f.appendChild(el("span")), "\u{1F513} You set suggestions to [[" + S.settings.freq + "]]. You can change this.");
+      rich(f.appendChild(el("span")), "\u{1F513} You control suggestions (now [[" + S.settings.freq + "]]). You can change this.");
       var b = el("button", "link", "Change how Atlas suggests things"); b.type = "button";
       b.addEventListener("click", function () { inc("ndg_set"); openSettings(); });
       f.appendChild(b);
