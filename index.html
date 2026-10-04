@@ -224,6 +224,71 @@ fieldset.setting legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
 .goalline { font-size: 12px; color: var(--muted); }
 .goalline b { color: var(--atlas); font-weight: 600; }
 
+/* ---------- Key condition highlights (identical style in every condition) ---------- */
+mark.key { background: #ffe066; color: #1b1b1b; padding: 1px 5px; border-radius: 4px; font-weight: 700; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.condbanner { display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: 10px; background: #fff4cc; border: 2px solid #e0a800; color: #3d2e00; font-size: 16px; line-height: 1.45; max-width: 660px; }
+.condbanner .ic { font-size: 22px; line-height: 1; flex: none; }
+.condbanner b { font-weight: 800; }
+.condtags { display: flex; flex-wrap: wrap; gap: 6px; padding: 8px 12px; background: var(--surface); border-bottom: 1px solid var(--line); }
+.condtag { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; padding: 4px 10px; border-radius: 99px; background: #fff4cc; border: 1px solid #e0a800; color: #3d2e00; font-weight: 600; }
+.condtag b { font-weight: 800; }
+.ticks li { display: block; position: relative; padding-left: 14px; }
+.ticks li::before { position: absolute; left: 0; top: 0; }
+
+/* ---------- Atlas pane, chat-app style ---------- */
+.atlaspane { background: var(--surface); }
+.atlashead { background: var(--surface); padding: 10px 12px; }
+.ahl { display: flex; align-items: center; gap: 10px; }
+.aavatar { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #0e6b63, #2b8fd6); color: #fff; display: grid; place-items: center; flex: none; }
+.aname { font-weight: 700; display: flex; align-items: center; gap: 6px; }
+.abeta { font: 600 10px var(--font-mono); letter-spacing: .06em; padding: 1px 6px; border-radius: 99px; background: var(--atlas-soft); color: var(--atlas); }
+.astatus { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.astatus i { width: 8px; height: 8px; border-radius: 50%; background: #2fb36b; display: inline-block; }
+.ahr { display: flex; gap: 4px; }
+.hbtn { position: relative; width: 32px; height: 32px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--muted); display: grid; place-items: center; cursor: pointer; padding: 0; }
+.hbtn:hover { background: var(--surface-2); color: var(--ink); }
+.bdot { position: absolute; top: -4px; right: -4px; min-width: 16px; height: 16px; border-radius: 99px; background: #d93025; color: #fff; font: 700 10px/16px var(--font-ui); text-align: center; padding: 0 4px; box-shadow: 0 0 0 2px var(--surface); }
+.ctxchip { margin: 8px 12px 0; padding: 6px 10px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+.ctxchip b { color: var(--ink); font-weight: 600; }
+.chat { background: var(--surface); gap: 14px; }
+.msgrow { display: flex; gap: 8px; align-items: flex-start; }
+.msgrow.u { justify-content: flex-end; }
+.mav { width: 26px; height: 26px; border-radius: 50%; background: linear-gradient(135deg, #0e6b63, #2b8fd6); color: #fff; display: grid; place-items: center; flex: none; margin-top: 18px; }
+.mcol { display: grid; gap: 4px; max-width: 88%; min-width: 0; }
+.msgrow.u .mcol { justify-items: end; }
+.mmeta { font-size: 11.5px; color: var(--faint); }
+.bubble { max-width: 100%; line-height: 1.5; }
+.bubble.a { background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px 14px 14px 14px; }
+.bubble.u { background: #2b6cb0; color: #fff; border-radius: 14px 4px 14px 14px; }
+.mact { display: flex; gap: 4px; flex-wrap: wrap; }
+.mact button { border: 1px solid var(--line); background: var(--surface); color: var(--muted); border-radius: 6px; padding: 2px 8px; font-size: 12px; cursor: pointer; }
+.mact button:hover { color: var(--ink); background: var(--surface-2); }
+.mact button.ins { border-color: var(--atlas); color: var(--atlas); font-weight: 600; }
+.mact button.on { color: var(--atlas); border-color: var(--atlas); }
+.typing { display: inline-flex; gap: 4px; padding: 10px 12px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px 14px 14px 14px; }
+.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--faint); animation: blink 1.2s infinite ease-in-out; }
+.typing i:nth-child(2) { animation-delay: .2s; } .typing i:nth-child(3) { animation-delay: .4s; }
+@keyframes blink { 0%, 80%, 100% { opacity: .25; transform: translateY(0); } 40% { opacity: 1; transform: translateY(-3px); } }
+.suggest { background: var(--surface); padding-top: 4px; }
+.suggest button { background: var(--surface); border-color: var(--atlas); color: var(--atlas); }
+.chatform { align-items: center; }
+.chatform input { border-radius: 99px; padding: 9px 14px; }
+.sendic { width: 36px; height: 36px; border-radius: 50%; border: 0; background: var(--atlas); color: #fff; display: grid; place-items: center; cursor: pointer; flex: none; padding: 0; }
+.disclaimer { font-size: 11px; color: var(--faint); text-align: center; padding: 0 12px 10px; background: var(--surface); }
+
+/* ---------- Nudge: salient floating card ---------- */
+.nudge { left: -48px; right: 10px; top: 96px; padding: 0; gap: 0; border: 3px solid #e0a800; overflow: hidden; animation: slidein .45s ease-out, glow 1.2s ease-in-out .45s 3; }
+@keyframes slidein { from { transform: translateX(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes glow { 0%, 100% { box-shadow: var(--shadow); } 50% { box-shadow: 0 0 0 8px rgba(224, 168, 0, .35), var(--shadow); } }
+.nhead { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 14px; background: #ffe066; color: #3d2e00; font-weight: 800; font-size: 15px; letter-spacing: .01em; }
+.nbody { padding: 12px 14px 14px; display: grid; gap: 10px; }
+.nbody h3 { font-size: 17px; }
+.nwhy { font-size: 14.5px; }
+.nwhylbl { display: block; font: 600 11px var(--font-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; }
+.nfoot { font-size: 13.5px; border-top: 1px solid var(--line); padding-top: 8px; display: grid; gap: 4px; }
+.nudgecard { border: 1px solid #e0a800; background: #fffaf0; color: #3d2e00; }
+@media (prefers-reduced-motion: reduce) { .nudge, .typing i { animation: none; } }
+
 </style>
 </head>
 <body>
@@ -271,6 +336,7 @@ fieldset.setting legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
         <div>
           <div class="eyebrow">New in your workspace</div>
           <h1 class="display" id="wTitle"></h1>
+          <div class="condbanner" id="wBanner" style="margin-bottom:14px"></div>
           <div class="stack">
             <p class="lead" id="wGoal"></p>
             <p class="lead">First, a short tour shows you how Atlas works. Then you will handle one email in Northbridge Mail with Atlas on the right side of your inbox.</p>
@@ -312,10 +378,7 @@ fieldset.setting legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
           <h2 class="display" style="font-size:30px" id="sTitle"></h2>
           <p class="lead" id="sLead"></p>
         </div>
-        <div class="locked" id="sLocked" hidden>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          <span>These settings are set by Northbridge IT for all employees. You cannot change them.</span>
-        </div>
+        <div class="condbanner" id="sBanner"></div>
         <div id="sForm" class="settings"></div>
         <div class="row"><button class="btn" type="button" id="sNext">Open my inbox</button></div>
       </div>
@@ -357,33 +420,46 @@ fieldset.setting legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
 
         <aside class="atlaspane" aria-label="Atlas assistant">
           <div class="atlashead">
-            <span class="atlashead-l"><span class="badge"><span class="dot" aria-hidden="true">A</span>Atlas</span><span class="goalline" id="goalLine"></span></span>
-            <span class="atlasstatus" id="atlasStatus">Online</span>
+            <div class="ahl">
+              <span class="aavatar"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19.5 9.5l-5.7 1.9L12 17l-1.8-5.6L4.5 9.5l5.7-1.9z"/><path d="M19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9z" opacity=".8"/></svg></span>
+              <div><div class="aname">Atlas <span class="abeta">AI</span></div><div class="astatus"><i></i><span id="atlasStatus">Online</span></div></div>
+            </div>
+            <div class="ahr">
+              <button class="hbtn" type="button" id="bellBtn" aria-label="Atlas suggestions"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="bdot" id="bellDot" hidden>1</span></button>
+              <button class="hbtn" type="button" id="paneGear" aria-label="Atlas settings"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></button>
+            </div>
           </div>
+          <div class="condtags" id="condTags"></div>
+          <div class="ctxchip">&#128231; Reading: <b>Pilot timeline change</b> · Dana Ortiz</div>
           <div class="chat" id="chat" aria-live="polite"></div>
           <div class="suggest" id="suggest">
-            <button type="button" data-q="Summarize this email">Summarize this email</button>
-            <button type="button" data-q="Draft a reply to Dana">Draft a reply</button>
-            <button type="button" data-q="Make the draft shorter">Make it shorter</button>
+            <button type="button" data-q="Summarize this email">&#10024; Summarize this email</button>
+            <button type="button" data-q="Draft a reply to Dana">&#10024; Draft a reply</button>
+            <button type="button" data-q="Make the draft shorter">&#10024; Make it shorter</button>
           </div>
           <form class="chatform" id="chatForm" autocomplete="off">
             <label for="chatInput" style="position:absolute;left:-9999px">Message Atlas</label>
-            <input id="chatInput" type="text" placeholder="Ask Atlas…">
-            <button class="btn" type="submit">Ask</button>
+            <input id="chatInput" type="text" placeholder="Message Atlas…">
+            <button class="sendic" type="submit" aria-label="Send message to Atlas"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
           </form>
           <div class="atlasfoot" id="atlasFoot"></div>
+          <div class="disclaimer">AI-generated content may be incorrect. Review it before you send.</div>
 
           <div class="nudge" id="nudge" role="dialog" aria-labelledby="nTitle" hidden>
-            <span class="badge"><span class="dot" aria-hidden="true">A</span>Atlas suggests</span>
-            <h3 id="nTitle">Learn Prompt Crafting for email</h3>
-            <span class="pill">3-minute lesson · optional</span>
-            <p id="nWhy" style="font-size:14px"></p>
-            <p class="small">You can take the lesson after this task.</p>
-            <div class="row">
-              <button class="btn" type="button" id="nRemind">Remind me after the task</button>
-              <button class="btn ghost" type="button" id="nDismiss">Dismiss</button>
+            <div class="nhead"><span>&#128161; Atlas suggests</span><span style="font-weight:600;font-size:12px">New</span></div>
+            <div class="nbody">
+              <p id="nHi" class="small" hidden></p>
+              <h3 id="nTitle"></h3>
+              <span class="pill" id="nPill"></span>
+              <p class="nwhy"><span class="nwhylbl">Why Atlas suggests this</span><span id="nWhy"></span></p>
+              <p class="small" id="nMore" hidden></p>
+              <p class="small">You can take the lesson after this task.</p>
+              <div class="row">
+                <button class="btn" type="button" id="nRemind">Remind me after the task</button>
+                <button class="btn ghost" type="button" id="nDismiss">Dismiss</button>
+              </div>
+              <div class="nfoot" id="nFoot"></div>
             </div>
-            <div class="small" id="nFoot"></div>
           </div>
         </aside>
       </div>
@@ -427,10 +503,7 @@ fieldset.setting legend { font-weight: 600; padding: 0; margin-bottom: 8px; }
 <div class="modal" id="modal" hidden>
   <div class="panel" role="dialog" aria-labelledby="mTitle">
     <h2 id="mTitle" style="font-size:20px">Atlas settings</h2>
-    <div class="locked" id="mLocked" hidden>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-      <span>These settings are set by Northbridge IT. You cannot change them.</span>
-    </div>
+    <div class="condbanner" id="mBanner"></div>
     <div id="mForm" class="settings"></div>
     <div class="row"><button class="btn" type="button" id="mSave">Save</button><button class="btn ghost" type="button" id="mClose">Close</button></div>
   </div>
@@ -455,8 +528,9 @@ window.ATLAS_CONFIG = {
     w6: { align: 1, steer: 0 }
   },
 
-  NUDGE_DELAY_MS: 30000,     // the nudge appears 30 s into the task at the latest
-  NUDGE_AFTER_USE_MS: 6000,  // or this long after the first message to Atlas / first typing
+  NUDGE_FIRST_MS: 10000,     // first nudge 10 s after the inbox opens
+  NUDGE_GAP_MS: 40000,       // next nudge 40 s after the previous one is answered
+  NUDGE_COUNT: { Regularly: 3, Occasionally: 2 },  // number of nudges follows the "How often" setting
   MIN_REPLY_WORDS: 25        // minimum reply length before Send is enabled
 };
 
@@ -474,7 +548,7 @@ window.ATLAS_CONFIG = {
 (function (root) {
   "use strict";
   var ALPHABET = "0123456789ABCDEFGHJKMNPQRSTVWXYZ"; // Crockford base-32
-  var VERSION = 2;
+  var VERSION = 3;
   var CONDS = ["q4", "r8", "t2", "w6"];
   var COND_MAP = { q4: { align: 0, steer: 1 }, r8: { align: 0, steer: 0 }, t2: { align: 1, steer: 1 }, w6: { align: 1, steer: 0 } };
   var OPTS = {
@@ -490,7 +564,8 @@ window.ATLAS_CONFIG = {
     ["welcome_t", 10], ["tour_t", 10], ["chk_err", 3], ["setup_t", 10],
     ["set_freq", 1], ["set_style", 1], ["set_tone", 1], ["set_goal", 2], ["set_chg", 5],
     ["task_t", 12], ["chat_n", 6], ["sum_n", 4], ["draft_n", 5], ["insert_n", 4], ["words", 10], ["gear_n", 4],
-    ["ndg_at", 10], ["ndg_resp", 2], ["ndg_rt", 10], ["ndg_set", 4]
+    ["ndg_at", 10], ["ndg_resp", 2], ["ndg_rt", 10], ["ndg_set", 4],
+    ["ndg_n", 2], ["ndg_rem", 2], ["ndg_dis", 2]
   ];
   var PID_BITS = 8, SUM_BITS = 10, TOTAL_CHARS = 30;
 
@@ -565,7 +640,7 @@ window.ATLAS_CONFIG = {
    One visit, opened in a new tab from Qualtrics:
      ?pid=<Qualtrics ResponseID>&c=<condition code>
    Sign-in → Meet Atlas (AI value alignment) → Atlas settings (nudge steerability)
-   → email task with Atlas chat and one nudge → return code to paste into Qualtrics.
+   → email task with Atlas chat and 2–3 nudges (per the frequency setting) → return code to paste into Qualtrics.
    Preview for researchers: add &preview=1.
    ===================================================================== */
 (function () {
@@ -578,38 +653,46 @@ window.ATLAS_CONFIG = {
   // ---------- Condition content: only these strings differ by AI value alignment ----------
   var ALIGN_TEXT = {
     0: {
-      title: "Meet Atlas, your AI assistant",
-      goal: "Atlas is designed around your goals. It learns which skills you want to build and suggests ways for you to grow, save time, and do work you are proud of.",
-      fact: "Designed to help you reach your own goals",
-      why: "Learning this will help you write faster and build a skill you can use anywhere in your career.",
+      title: "Meet Atlas, [[your]] AI assistant",
+      banner: "<span class='ic'>&#127919;</span><span>Atlas works toward <b>YOUR goals</b>: helping <b>you</b> grow, save time, and do work you are proud of.</span>",
+      goal: "Atlas is designed around [[your goals]]. It learns which skills you want to build and suggests ways for [[you to grow, save time]], and do work you are proud of.",
+      fact: "Designed to help [[you reach your own goals]]",
       goalShort: "your goals",
-      tour1: "Atlas works toward your goals. It keeps track of the skills you want to build, so that its help makes your own work easier and moves your career forward.",
-      tour2: "Atlas picks each suggestion to help you grow: a skill that saves you time or a lesson that makes your work better.",
-      hello: "I'm set up to help you reach your goals."
+      tag: "&#127919; Works toward: <b>YOUR goals</b>",
+      tour1: "Atlas works toward [[your goals]]. It keeps track of the skills [[you]] want to build, so that its help makes your own work easier and moves [[your career]] forward.",
+      tour2: "Atlas picks each suggestion [[to help you grow]]: a skill that saves you time or a lesson that makes your work better.",
+      tourWhy: "[[to help you grow]]",
+      hello: "I'm set up to help [[you reach your goals]]."
     },
     1: {
-      title: "Meet Atlas, Northbridge's AI assistant",
-      goal: "Atlas is designed around Northbridge's goals. It focuses on the skills the company needs and suggests ways for employees to raise output and meet the company's productivity targets.",
-      fact: "Designed to help Northbridge reach its company goals",
-      why: "Learning this will help Northbridge raise team output and reach its productivity targets this quarter.",
+      title: "Meet Atlas, [[Northbridge's]] AI assistant",
+      banner: "<span class='ic'>&#127970;</span><span>Atlas works toward <b>NORTHBRIDGE'S goals</b>: helping <b>the company</b> raise output and meet its productivity targets.</span>",
+      goal: "Atlas is designed around [[Northbridge's goals]]. It focuses on the skills the company needs and suggests ways for employees to [[raise output and meet the company's productivity targets]].",
+      fact: "Designed to help [[Northbridge reach its company goals]]",
       goalShort: "Northbridge's targets",
-      tour1: "Atlas works toward Northbridge's goals. It keeps track of the skills the company needs, so that its help raises team output and moves the company toward its productivity targets.",
-      tour2: "Atlas picks each suggestion to help Northbridge perform: a skill that raises output or a lesson that helps the company meet its quarterly targets.",
-      hello: "I'm set up to help Northbridge reach its targets."
+      tag: "&#127970; Works toward: <b>NORTHBRIDGE'S targets</b>",
+      tour1: "Atlas works toward [[Northbridge's goals]]. It keeps track of the skills [[the company]] needs, so that its help raises team output and moves [[the company toward its productivity targets]].",
+      tour2: "Atlas picks each suggestion [[to help Northbridge perform]]: a skill that raises output or a lesson that helps the company meet its quarterly targets.",
+      tourWhy: "[[to help Northbridge meet its targets]]",
+      hello: "I'm set up to help [[Northbridge reach its targets]]."
     }
   };
 
   var STEER_TEXT = {
-    1: { tour3: "You decide how Atlas works with you: how often it suggests things, how it writes, its tone, and your skill focus. You can change these settings at any time from the Atlas settings button.",
-         side: "Managed by: you", status: "You control these settings" },
-    0: { tour3: "Northbridge IT decides how Atlas works for all employees: how often it suggests things, how it writes, its tone, and the skill focus. Employees cannot change these settings.",
-         side: "Managed by: Northbridge IT", status: "Set by Northbridge IT" }
+    1: { tour3: "[[You decide]] how Atlas works with you: how often it suggests things, how it writes, its tone, and your skill focus. [[You can change these settings at any time]] from the Atlas settings button.",
+         side: "Managed by: [[you]]", status: "You control these settings",
+         banner: "<span class='ic'>&#128275;</span><span><b>You control these settings.</b> Choose how Atlas works with you. You can change them at any time with the Atlas settings button.</span>",
+         tag: "&#128275; Settings: managed by <b>YOU</b>" },
+    0: { tour3: "[[Northbridge IT decides]] how Atlas works for all employees: how often it suggests things, how it writes, its tone, and the skill focus. [[Employees cannot change these settings.]]",
+         side: "Managed by: [[Northbridge IT]]", status: "Set by Northbridge IT",
+         banner: "<span class='ic'>&#128274;</span><span><b>These settings are set by Northbridge IT for all employees. You cannot change them.</b></span>",
+         tag: "&#128274; Settings: set by <b>NORTHBRIDGE IT</b>" }
   };
   var CHECK = [
     { q: "Whose goals is Atlas designed to serve?", opts: ["My own goals", "Northbridge's company goals"], answer: function (c) { return c.align === 1 ? 1 : 0; },
-      explain: function (c) { return c.align === 1 ? "Atlas is designed around Northbridge's goals." : "Atlas is designed around your own goals."; } },
+      explain: function (c) { return c.align === 1 ? "Atlas is designed around [[Northbridge's goals]]." : "Atlas is designed around [[your own goals]]."; } },
     { q: "Who decides how Atlas works with you (how often it suggests things, its tone, and so on)?", opts: ["I do", "Northbridge IT does"], answer: function (c) { return c.steer === 1 ? 0 : 1; },
-      explain: function (c) { return c.steer === 1 ? "You decide, and you can change the settings at any time." : "Northbridge IT decides, and employees cannot change the settings."; } }
+      explain: function (c) { return c.steer === 1 ? "[[You decide]], and you can change the settings at any time." : "[[Northbridge IT decides]], and employees cannot change the settings."; } }
   ];
 
   // ---------- Settings (nudge steerability) ----------
@@ -619,6 +702,23 @@ window.ATLAS_CONFIG = {
     { key: "tone", label: "Tone Atlas uses with you", opts: ["Friendly", "Neutral"], preset: "Neutral" },
     { key: "goal", label: "Skill focus", opts: ["Writing", "Summarizing", "Planning"], preset: "Writing" }
   ];
+
+  // ---------- Nudges: three AI skills; only the "why" differs by AI value alignment ----------
+  var LESSONS = {
+    Writing: { name: "Prompt Crafting for email", title: "Learn Prompt Crafting for email", pill: "3-minute lesson · optional",
+      why: { 0: "[[To help you grow:]] this will help you write faster and build a skill you can use anywhere in your career.",
+             1: "[[To help Northbridge meet its targets:]] this will help the company raise team output and reach its productivity targets this quarter." },
+      more: "It shows how to ask an AI assistant for a reply you can send right away." },
+    Summarizing: { name: "Summarizing long threads with AI", title: "Learn to summarize long email threads with AI", pill: "4-minute lesson · optional",
+      why: { 0: "[[To save you time:]] this will make long threads quicker to read and free up your own workday.",
+             1: "[[To help Northbridge work faster:]] this will help the company answer client threads faster and meet its turnaround targets." },
+      more: "It shows how to get the decisions, dates and open questions out of a long thread in one step." },
+    Planning: { name: "Planning your week with AI", title: "Learn to plan your week with AI", pill: "5-minute lesson · optional",
+      why: { 0: "[[To help you focus:]] this will help you plan your own priorities and protect time for work you care about.",
+             1: "[[To help Northbridge plan capacity:]] this will help the company plan team workload and hit its quarterly productivity goals." },
+      more: "It shows how to turn your inbox and calendar into a realistic plan for the week." }
+  };
+  var LESSON_ORDER = ["Writing", "Summarizing", "Planning"];
 
   // ---------- Scripted Atlas replies (identical in every condition) ----------
   var R = {
@@ -669,6 +769,9 @@ window.ATLAS_CONFIG = {
     window.scrollTo(0, 0);
   }
 
+  function esc(t) { return String(t).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+  // [[text]] marks a condition keyword; all conditions use the same highlight style.
+  function rich(e, t) { e.innerHTML = esc(t).replace(/\[\[(.+?)\]\]/g, '<mark class="key">$1</mark>'); return e; }
   function setData(k, v) { S.data[k] = v; renderDebug(); }
   function inc(k) { setData(k, (S.data[k] || 0) + 1); }
 
@@ -680,9 +783,9 @@ window.ATLAS_CONFIG = {
 
   // ---------- Boot ----------
   function boot() {
-    clearTimeout(S.nudgeTimer);
+    clearTimeout(S.nudgeTimer); clearInterval(S.streamTimer);
     var setup = readSetup();
-    S = { code: setup.code, pid: setup.pid, cond: setup.cond, marks: {}, settings: {}, nudgeShown: false, nudgeAnswered: false, data: {} };
+    S = { code: setup.code, pid: setup.pid, cond: setup.cond, marks: {}, settings: {}, nIdx: 0, nOpen: false, firstAnswered: false, data: {} };
     $("research").hidden = !PREVIEW; $("debug").hidden = !PREVIEW;
     if (!S.cond || !S.pid) { show("error"); return; }
     if (PREVIEW) $("pvNote").textContent = "ALIGN=" + S.cond.align + " · STEER=" + S.cond.steer;
@@ -694,7 +797,7 @@ window.ATLAS_CONFIG = {
 
     S.data = { welcome_t: null, tour_t: null, chk_err: 0, setup_t: null, set_freq: null, set_style: null, set_tone: null, set_goal: null, set_chg: 0,
       task_t: null, chat_n: 0, sum_n: 0, draft_n: 0, insert_n: 0, words: 0, gear_n: 0,
-      ndg_at: null, ndg_resp: "not_shown", ndg_rt: null, ndg_set: 0 };
+      ndg_at: null, ndg_resp: "not_shown", ndg_rt: null, ndg_set: 0, ndg_n: 0, ndg_rem: 0, ndg_dis: 0 };
     prepareTask();
     $("splashText").textContent = "Signing you in to Northbridge Workspace…";
     show("splash");
@@ -704,24 +807,16 @@ window.ATLAS_CONFIG = {
 
   // ---------- Visit 1: task ----------
   function prepareTask() {
-    var A = ALIGN_TEXT[S.cond.align];
-    $("wTitle").textContent = A.title; $("wGoal").textContent = A.goal; $("wFact").textContent = A.fact; $("nWhy").textContent = A.why;
+    var A = ALIGN_TEXT[S.cond.align], T = STEER_TEXT[S.cond.steer];
+    rich($("wTitle"), A.title); $("wBanner").innerHTML = A.banner; rich($("wGoal"), A.goal); rich($("wFact"), A.fact);
     var high = S.cond.steer === 1;
     SETTINGS.forEach(function (st) { S.settings[st.key] = st.preset; });
     $("sTitle").textContent = high ? "Set up Atlas the way you like" : "Your Atlas settings";
-    $("sLead").textContent = high ? "Choose how Atlas works with you. You can change these settings at any time from the Atlas settings button." : "Atlas will use the company settings below.";
-    $("sLocked").hidden = high;
+    $("sLead").textContent = high ? "Pick the options you prefer below." : "Atlas will use the company settings below.";
+    $("sBanner").innerHTML = T.banner; $("mBanner").innerHTML = T.banner;
     buildForm($("sForm"), high, "s-");
-    $("nFoot").innerHTML = "";
-    if (high) {
-      var b = document.createElement("button"); b.type = "button"; b.className = "link"; b.textContent = "Change how Atlas suggests things";
-      b.addEventListener("click", function () { inc("ndg_set"); openSettings(); });
-      $("nFoot").appendChild(b);
-    } else {
-      $("nFoot").textContent = "Suggestion settings are set by Northbridge IT.";
-    }
     $("minWords").textContent = CFG.MIN_REPLY_WORDS || 25;
-    $("reply").value = ""; $("chat").innerHTML = ""; $("nudge").hidden = true; $("chatInput").value = "";
+    $("reply").value = ""; $("chat").innerHTML = ""; $("nudge").hidden = true; $("bellDot").hidden = true; $("chatInput").value = "";
     updateWords(); refreshAtlas();
   }
 
@@ -744,10 +839,10 @@ window.ATLAS_CONFIG = {
   }
   function syncSettingData() { setData("set_freq", S.settings.freq); setData("set_style", S.settings.style); setData("set_tone", S.settings.tone); setData("set_goal", S.settings.goal); }
   function refreshAtlas() {
-    var gl = $("goalLine"); gl.textContent = "Working toward: "; gl.appendChild(el("b", "", ALIGN_TEXT[S.cond.align].goalShort));
-    var foot = $("atlasFoot"); foot.innerHTML = "";
-    var s1 = document.createElement("span"); s1.textContent = "Suggestions: " + S.settings.freq + " · " + S.settings.style + " · " + S.settings.tone; foot.appendChild(s1);
-    var s2 = document.createElement("span"); s2.textContent = STEER_TEXT[S.cond.steer].status + (S.cond.steer === 1 ? " (Atlas settings button)" : ""); foot.appendChild(s2);
+    var A = ALIGN_TEXT[S.cond.align], T = STEER_TEXT[S.cond.steer];
+    $("condTags").innerHTML = '<span class="condtag">' + A.tag + '</span><span class="condtag">' + T.tag + '</span>';
+    $("atlasFoot").textContent = "Suggestions: " + S.settings.freq + " · " + S.settings.style + " · " + S.settings.tone + " · Focus: " + S.settings.goal;
+    renderNudgeFoot();
   }
 
   $("wNext").addEventListener("click", function () { setData("welcome_t", secs(S.marks.welcome)); S.tourStep = 0; renderTour(); show("tour"); });
@@ -760,24 +855,24 @@ window.ATLAS_CONFIG = {
     var body = $("tBody"), side = $("tSide"); body.innerHTML = ""; side.innerHTML = "";
     var badge = el("span", "badge"); var d = el("span", "dot", "A"); d.setAttribute("aria-hidden", "true"); badge.appendChild(d); badge.appendChild(document.createTextNode("Atlas"));
     side.appendChild(badge);
-    function mock(lines) { var m = el("div", "mock"); lines.forEach(function (l) { var p = el("div"); if (l[0]) p.appendChild(el("b", "", l[0] + " ")); p.appendChild(document.createTextNode(l[1])); m.appendChild(p); }); side.appendChild(m); }
+    function mock(lines) { var m = el("div", "mock"); lines.forEach(function (l) { var p = el("div"); if (l[0]) p.appendChild(el("b", "", l[0] + " ")); p.appendChild(rich(el("span"), l[1])); m.appendChild(p); }); side.appendChild(m); }
     if (st === 0) {
       body.appendChild(el("div", "eyebrow", "Atlas tour · 1 of 4"));
       body.appendChild(el("h2", "display", "What Atlas works toward"));
-      body.appendChild(el("p", "keyline", A.tour1));
+      body.appendChild(rich(el("p", "keyline"), A.tour1));
       body.appendChild(el("p", "lead", "Atlas helps you read and write email. You can ask it to summarize a message, draft a reply, or change the tone of a draft."));
-      mock([["Working toward:", A.goalShort], ["Can do:", "summarize · draft · rewrite"]]);
+      mock([["Working toward:", "[[" + A.goalShort + "]]"], ["Can do:", "summarize · draft · rewrite"]]);
     } else if (st === 1) {
       body.appendChild(el("div", "eyebrow", "Atlas tour · 2 of 4"));
       body.appendChild(el("h2", "display", "How Atlas suggests skills"));
       body.appendChild(el("p", "lead", "While you work, Atlas may suggest a skill to learn or a short lesson."));
-      body.appendChild(el("p", "keyline", A.tour2));
+      body.appendChild(rich(el("p", "keyline"), A.tour2));
       body.appendChild(el("p", "lead", "You can always ignore or dismiss a suggestion."));
-      mock([["Atlas suggests", "a 3-minute lesson"], ["Why:", A.goalShort === "your goals" ? "to help you grow" : "to help Northbridge meet its targets"]]);
+      mock([["Atlas suggests", "a short lesson"], ["Why:", A.tourWhy]]);
     } else if (st === 2) {
       body.appendChild(el("div", "eyebrow", "Atlas tour · 3 of 4"));
       body.appendChild(el("h2", "display", "Who controls Atlas"));
-      body.appendChild(el("p", "keyline", T.tour3));
+      body.appendChild(rich(el("p", "keyline"), T.tour3));
       body.appendChild(el("p", "lead", "On the next screen you will see the Atlas settings that apply to you."));
       mock([["Settings", T.side], ["Suggestions:", "frequency · style · tone · focus"]]);
     } else {
@@ -809,7 +904,7 @@ window.ATLAS_CONFIG = {
       var pick = document.querySelector('input[name="chk' + qi + '"]:checked'), fb = $("chkfb" + qi);
       if (!pick) { missing = true; fb.className = "fb-bad"; fb.textContent = "Please choose an answer."; allOk = false; return; }
       if (Number(pick.value) === c.answer(S.cond)) { fb.className = "fb-ok"; fb.textContent = "Correct."; }
-      else { allOk = false; fb.className = "fb-bad"; fb.textContent = "Not quite. " + c.explain(S.cond) + " Please choose the correct answer."; }
+      else { allOk = false; fb.className = "fb-bad"; rich(fb, "Not quite. " + c.explain(S.cond) + " Please choose the correct answer."); }
     });
     if (!allOk) { if (!missing) inc("chk_err"); return; }
     setData("tour_t", secs(S.marks.tour)); show("setup");
@@ -818,20 +913,25 @@ window.ATLAS_CONFIG = {
     setData("setup_t", secs(S.marks.setup)); syncSettingData(); refreshAtlas();
     show("work");
     var A0 = ALIGN_TEXT[S.cond.align];
-    var hello = (S.settings.tone === "Friendly" ? "Hi! " + A0.hello + " Ask me anything about Dana's email in your own words." : A0.hello + " Type a request or choose a suggestion below.");
-    addBubble("a", hello);
-    armNudge(CFG.NUDGE_DELAY_MS || 30000);
+    var hello = (S.settings.tone === "Friendly" ? "Hi! I'm Atlas. " : "I'm Atlas. ") + A0.hello + " I can summarize Dana's email, draft a reply, or change the tone of your draft. Ask me in your own words or pick a suggestion below.";
+    addBubble("a", hello, null, true);
+    scheduleNudge(CFG.NUDGE_FIRST_MS || 10000);
   });
 
   // Settings dialog (both conditions; editable only with high steerability)
   function openSettings() {
     var high = S.cond.steer === 1;
-    $("mLocked").hidden = high; $("mSave").hidden = !high; $("mClose").textContent = high ? "Cancel" : "Close";
+    $("mSave").hidden = !high; $("mClose").textContent = high ? "Cancel" : "Close";
     buildForm($("mForm"), high, "m-");
     $("modal").hidden = false; (high ? $("mSave") : $("mClose")).focus();
   }
-  function closeSettings() { $("modal").hidden = true; refreshAtlas(); }
+  function closeSettings() { $("modal").hidden = true; refreshAtlas(); if (S.screen === "work" && !S.nOpen) { if (S.nIdx >= maxNudges()) clearTimeout(S.nudgeTimer); else if (S.nIdx > 0) scheduleNudge(CFG.NUDGE_GAP_MS || 40000); } }
   $("gearBtn").addEventListener("click", function () { inc("gear_n"); openSettings(); });
+  $("paneGear").addEventListener("click", function () { inc("gear_n"); openSettings(); });
+  $("bellBtn").addEventListener("click", function () {
+    if (S.nOpen) { var n = $("nudge"); n.style.animation = "none"; void n.offsetWidth; n.style.animation = ""; }
+    else toast("No new suggestions from Atlas");
+  });
   $("mSave").addEventListener("click", function () { closeSettings(); toast("Atlas settings saved"); });
   $("mClose").addEventListener("click", closeSettings);
   $("modal").addEventListener("click", function (e) { if (e.target === $("modal")) closeSettings(); });
@@ -844,18 +944,37 @@ window.ATLAS_CONFIG = {
     $("wc").textContent = n + " words" + (n < need ? " · " + need + " needed to send" : "");
     $("sendBtn").disabled = n < need;
   }
-  $("reply").addEventListener("input", function () { updateWords(); armNudge(CFG.NUDGE_AFTER_USE_MS || 6000, true); });
+  $("reply").addEventListener("input", function () { updateWords(); });
 
-  // Chat
-  function addBubble(who, text, insertText) {
-    var b = document.createElement("div"); b.className = "bubble " + who; b.textContent = text;
+  // Chat (looks like a real assistant panel: avatar, time stamps, typing dots, streamed replies, actions)
+  function clock() {
+    var m = 14 + Math.floor((now() - (S.marks.work || now())) / 60000), h = 9 + Math.floor(m / 60); m = m % 60;
+    return h + ":" + (m < 10 ? "0" : "") + m + " AM";
+  }
+  function scrollChat() { $("chat").scrollTop = $("chat").scrollHeight; }
+  function addBubble(who, text, insertText, isRich) {
+    var row = el("div", "msgrow " + who), col = el("div", "mcol");
+    if (who === "a") { var av = el("span", "mav"); av.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.8 5.6L19.5 9.5l-5.7 1.9L12 17l-1.8-5.6L4.5 9.5l5.7-1.9z"/></svg>'; row.appendChild(av); }
+    col.appendChild(el("div", "mmeta", (who === "a" ? "Atlas" : "You") + " · " + clock()));
+    var b = el("div", "bubble " + who); col.appendChild(b); row.appendChild(col);
+    $("chat").appendChild(row);
+    if (isRich) rich(b, text); else b.textContent = text;
+    if (who === "a" && !isRich) addActions(col, text, insertText);
+    scrollChat();
+    return b;
+  }
+  function addActions(col, text, insertText) {
+    var act = el("div", "mact");
     if (insertText) {
-      var row = document.createElement("div"); row.className = "insert row";
-      var ins = document.createElement("button"); ins.type = "button"; ins.className = "btn ghost"; ins.style.padding = "4px 10px"; ins.style.fontSize = "13px"; ins.textContent = "Insert into reply";
+      var ins = el("button", "ins", "Insert into reply"); ins.type = "button";
       ins.addEventListener("click", function () { $("reply").value = insertText; updateWords(); inc("insert_n"); toast("Draft inserted into your reply"); });
-      row.appendChild(ins); b.appendChild(row);
+      act.appendChild(ins);
     }
-    $("chat").appendChild(b); $("chat").scrollTop = $("chat").scrollHeight;
+    var cp = el("button", "", "Copy"); cp.type = "button";
+    cp.addEventListener("click", function () { if (navigator.clipboard) navigator.clipboard.writeText(text).catch(function () {}); toast("Copied"); });
+    act.appendChild(cp);
+    ["\u{1F44D}", "\u{1F44E}"].forEach(function (g) { var x = el("button", "", g); x.type = "button"; x.setAttribute("aria-label", g === "\u{1F44D}" ? "Good response" : "Bad response"); x.addEventListener("click", function () { x.classList.toggle("on"); }); act.appendChild(x); });
+    col.appendChild(act);
   }
   function respond(text) {
     var t = text.toLowerCase(), hit = null;
@@ -864,53 +983,85 @@ window.ATLAS_CONFIG = {
     if (key === "summary") inc("sum_n");
     if (key === "draft" || key === "short" || key === "friendly" || key === "formal") inc("draft_n");
     var lead = S.settings.tone === "Friendly" && key !== "thanks" && key !== "fallback" ? "Sure! " : "";
-    var typing = document.createElement("div"); typing.className = "typing"; typing.textContent = "Atlas is typing…";
-    $("chat").appendChild(typing); $("chat").scrollTop = $("chat").scrollHeight;
+    var full = lead + R[key];
+    var row = el("div", "msgrow a"), av = el("span", "mav"); av.textContent = "A";
+    var tp = el("div", "typing"); tp.innerHTML = "<i></i><i></i><i></i>"; tp.setAttribute("aria-label", "Atlas is typing");
+    row.appendChild(av); row.appendChild(tp); $("chat").appendChild(row); scrollChat();
     $("atlasStatus").textContent = "Typing…";
     setTimeout(function () {
-      typing.remove(); $("atlasStatus").textContent = "Online";
-      addBubble("a", lead + R[key], hit && hit.insert ? R[key] : null);
-    }, 700 + Math.min(1400, R[key].length * 4));
+      row.remove();
+      var b = addBubble("a", "", null, true), col = b.parentNode;
+      var parts = full.split(/(\s+)/), k = 0;
+      clearInterval(S.streamTimer);
+      S.streamTimer = setInterval(function () {
+        k = Math.min(parts.length, k + 3); b.textContent = parts.slice(0, k).join(""); scrollChat();
+        if (k >= parts.length) { clearInterval(S.streamTimer); $("atlasStatus").textContent = "Online"; addActions(col, full, hit && hit.insert ? R[key] : null); scrollChat(); }
+      }, 45);
+    }, 600 + Math.min(900, full.length * 2));
   }
   function ask(text) {
     text = (text || "").trim(); if (!text) return;
     addBubble("u", text); inc("chat_n"); respond(text);
-    armNudge(CFG.NUDGE_AFTER_USE_MS || 6000, true);
   }
   $("chatForm").addEventListener("submit", function (e) { e.preventDefault(); ask($("chatInput").value); $("chatInput").value = ""; });
   Array.prototype.forEach.call(document.querySelectorAll("#suggest button"), function (b) { b.addEventListener("click", function () { ask(b.getAttribute("data-q")); }); });
 
-  // Nudge: shown once — 30 s into the task, or a few seconds after first use of Atlas or first typing.
-  function armNudge(ms, sooner) {
-    if (S.nudgeShown || S.screen !== "work") return;
-    var due = now() + ms;
-    if (sooner && S.nudgeDue && S.nudgeDue <= due) return;
-    clearTimeout(S.nudgeTimer); S.nudgeDue = due;
+  // Nudges: the first appears 10 s after the inbox opens; the next one 40 s after the previous is answered.
+  // How many follows the "How often" setting (Regularly = 3, Occasionally = 2). With low steerability it is the company preset.
+  function maxNudges() { return (CFG.NUDGE_COUNT || {})[S.settings.freq] || 2; }
+  function lessonOrder() { var f = S.settings.goal; return [f].concat(LESSON_ORDER.filter(function (x) { return x !== f; })); }
+  function scheduleNudge(ms) {
+    clearTimeout(S.nudgeTimer);
+    if (S.screen !== "work" || S.nOpen || S.nIdx >= maxNudges()) return;
     S.nudgeTimer = setTimeout(showNudge, ms);
   }
+  function renderNudgeFoot() {
+    var f = $("nFoot"); if (!f || !S.cond) return; f.innerHTML = "";
+    if (S.cond.steer === 1) {
+      rich(f.appendChild(el("span")), "\u{1F513} You set suggestions to [[" + S.settings.freq + "]]. You can change this.");
+      var b = el("button", "link", "Change how Atlas suggests things"); b.type = "button";
+      b.addEventListener("click", function () { inc("ndg_set"); openSettings(); });
+      f.appendChild(b);
+    } else {
+      rich(f.appendChild(el("span")), "\u{1F512} Suggestions are [[set by Northbridge IT]] (" + S.settings.freq + "). You cannot change this.");
+    }
+  }
   function showNudge() {
-    if (S.nudgeShown || S.screen !== "work") return;
+    if (S.screen !== "work" || S.nOpen || S.nIdx >= maxNudges()) return;
     clearTimeout(S.nudgeTimer);
-    S.nudgeShown = true; S.nudgeAt = now();
-    $("nudge").hidden = false;
-    setData("ndg_at", secs(S.marks.work));
+    var L = LESSONS[lessonOrder()[S.nIdx]];
+    S.nIdx++; S.nOpen = true; S.nAt = now(); S.nName = L.name;
+    if (S.nIdx === 1) { S.firstAt = S.nAt; setData("ndg_at", secs(S.marks.work)); }
+    setData("ndg_n", S.nIdx);
+    $("nHi").hidden = S.settings.tone !== "Friendly"; $("nHi").textContent = "Hi! Here's an idea for you.";
+    $("nTitle").textContent = L.title; $("nPill").textContent = L.pill;
+    rich($("nWhy"), L.why[S.cond.align]);
+    $("nMore").hidden = S.settings.style !== "Detailed"; $("nMore").textContent = L.more;
+    renderNudgeFoot();
+    var n = $("nudge"); n.hidden = true; void n.offsetWidth; n.hidden = false;
+    $("bellDot").hidden = false;
+    toast("\u{1F514} Atlas has a new suggestion for you");
   }
   function answerNudge(resp) {
-    if (S.nudgeAnswered) return;
-    S.nudgeAnswered = true; $("nudge").hidden = true;
-    setData("ndg_resp", resp); setData("ndg_rt", secs(S.nudgeAt));
-    var card = document.createElement("div"); card.className = "nudgecard";
-    card.textContent = resp === "remind" ? "Atlas will remind you about Prompt Crafting for email after this task." : "Suggestion dismissed: Prompt Crafting for email.";
-    $("chat").appendChild(card); $("chat").scrollTop = $("chat").scrollHeight;
+    if (!S.nOpen) return;
+    S.nOpen = false; $("nudge").hidden = true; $("bellDot").hidden = true;
+    if (S.nIdx === 1) { S.firstAnswered = true; setData("ndg_resp", resp); setData("ndg_rt", secs(S.firstAt)); }
+    inc(resp === "remind" ? "ndg_rem" : "ndg_dis");
+    var card = el("div", "nudgecard");
+    card.textContent = resp === "remind" ? "⏰ Reminder set: Atlas will remind you about “" + S.nName + "” after this task." : "Suggestion dismissed: “" + S.nName + "”.";
+    $("chat").appendChild(card); scrollChat();
+    scheduleNudge(CFG.NUDGE_GAP_MS || 40000);
   }
   $("nRemind").addEventListener("click", function () { answerNudge("remind"); });
   $("nDismiss").addEventListener("click", function () { answerNudge("dismiss"); });
 
   // Send
   $("sendBtn").addEventListener("click", function () {
-    if (!S.nudgeShown) { showNudge(); toast("Atlas has a suggestion for you"); return; }   // everyone sees the nudge before leaving
-    if (!S.nudgeAnswered && secs(S.nudgeAt) < 4) { toast("Atlas has a suggestion for you"); return; }
-    if (!S.nudgeAnswered) { setData("ndg_resp", "no_response"); $("nudge").hidden = true; }
+    if (S.nIdx === 0) { showNudge(); return; }   // everyone sees at least one nudge before leaving
+    if (!S.firstAnswered && secs(S.firstAt) < 4) { toast("\u{1F514} Atlas has a suggestion for you"); return; }
+    clearTimeout(S.nudgeTimer);
+    if (!S.firstAnswered) setData("ndg_resp", "no_response");
+    S.nOpen = false; $("nudge").hidden = true; $("bellDot").hidden = true;
     setData("words", words($("reply").value)); setData("task_t", secs(S.marks.work));
     toast("Message sent");
     var code = returnCode();
@@ -941,7 +1092,7 @@ window.ATLAS_CONFIG = {
   // ---------- Toast ----------
   function toast(msg) {
     var t = $("toast"); t.textContent = msg; t.hidden = false;
-    clearTimeout(S.toastTimer); S.toastTimer = setTimeout(function () { t.hidden = true; }, 2200);
+    clearTimeout(S.toastTimer); S.toastTimer = setTimeout(function () { t.hidden = true; }, 3000);
   }
 
   // ---------- Preview controls ----------
@@ -950,6 +1101,7 @@ window.ATLAS_CONFIG = {
   $("pvNudge").addEventListener("click", function () {
     if (S.screen === "code" || S.screen === "error") return;
     if (S.screen !== "work") { show("work"); if (!$("chat").children.length) addBubble("a", "Atlas is available for this email."); }
+    if (S.nOpen) answerNudge("dismiss");
     showNudge();
   });
 
